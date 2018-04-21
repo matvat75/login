@@ -1,0 +1,23 @@
+.container {
+  margin-top: 50px;
+}
+.card-body{
+  background-color: darkcyan;
+  color: greenyellow;
+}
+.modal-footer{
+  background-color: greenyellow;
+  text-align: left;
+  color: darkcyan;
+  display: block;
+}
+button {
+  background-color: greenyellow;
+  color: darkcyan;
+  float: left;
+  border-radius: 100px;
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}

@@ -1,0 +1,40 @@
+<div class="col-md-12 mb-r pb-5">
+  <form (ngSubmit)="onSubmit()" #f="ngForm">
+    <div class="card">
+      <div class="card-body">
+        <!--body-->
+        <div class="md-form">
+          <label for="defaultForm-email" class="active">
+            Your email
+          </label>
+          <input type="text" id="defaultForm-email" class="form-control" ngModel name="email" required email #email="ngModel">
+          <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a valid email!</span>
+        </div>
+        <div class="md-form">
+          <br>
+          <label for="defaultForm-pass" class="active">
+            Your password
+          </label>
+          <input type="password" id="defaultForm-pass" class="form-control" ngModel name="password" required>
+        </div>
+        <div class="text-center">
+          <br>
+          <button class="btn btn-default waves-effect waves-light" type="submit" [disabled]="!f.valid">Login</button>
+        </div>
+      </div>
+      <!--Footer-->
+      <div class="modal-footer">
+        <div class="options">
+          <p>
+            not a member?
+            <a routerLink="/signUp">Sign Up</a>
+          </p>
+          <p>
+            Forgot
+            <a href="#">Password?</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

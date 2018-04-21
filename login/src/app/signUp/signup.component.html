@@ -1,0 +1,35 @@
+<div class="col-md-12 mb-r">
+  <form (ngSubmit)="onSubmit()" #f="ngForm">
+    <div class="card">
+      <div class="card-body">
+        <div class="md-form">
+          <label for="signUpForm-name" class>
+            Your name
+          </label>
+          <input type="text" id="signUpForm-name" class="form-control">
+        </div>
+        <br>
+        <div class="md-form">
+          <label for="signUpForm-email">
+            your email
+          </label>
+          <input type="text" id="signUpForm-email" class="form-control" ngModel name="email" required email #email="ngModel">
+          <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a valid email!</span>
+        </div>
+        <br>
+        <div class="md-form">
+          <label for="signUpForm-pass" class="active">
+            Your password
+          </label>
+          <input type="password" id="signUpForm-pass" class="form-control" ngModel name="password" required>
+        </div>
+        <br>
+        <div class="text-center">
+          <button class="btn btn-default waves-effect waves-light" type="submit" [disabled]="!f.valid">Sign up</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+
